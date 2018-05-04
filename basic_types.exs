@@ -57,9 +57,9 @@ IO.puts "\nsong#{song}"
 IO.puts byte_size("song")
 IO.puts String.length("song")
 
-IO.puts "================="
+IO.puts " ==================="
 IO.puts " Anonymous Functions"
-IO.puts "================="
+IO.puts " ==================="
 
 add = fn a, b -> 
   a + b 
@@ -72,3 +72,25 @@ IO.puts is_function add, 2
 IO.puts is_function add, 1
 # put `.` to invoke anonymous function
 IO.puts add.(1, 2)
+
+IO.puts "============="
+IO.puts "(linked)Lists"
+IO.puts "============="
+IO.puts length [1, 2, true, 3]
+[1, 2, 3] ++ [4, 5, 6]
+[1, true, 2, false, 3, true] -- [true, false]
+
+list = [1, 2, 3]
+hd(list) # 1
+tl(list) # [2, 3]
+
+IO.puts "======="
+IO.puts "Tuples"
+IO.puts "======="
+tuple = {:ok, "hello"}
+IO.puts tuple_size tuple
+IO.puts elem(tuple, 0)
+IO.puts elem tuple, 1
+tuple2 = put_elem tuple, 1, "world"
+IO.puts elem tuple2, 1
+IO.puts elem File.read("basic_types.exs.unknow"), 0
